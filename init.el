@@ -1,83 +1,18 @@
-;;ÏÔÊ¾Ê±¼ä 
+;;é»˜è®¤è¿›å…¥vimæ¨¡å¼ç¼–è¾‘
+;;(add-to-list 'load-path "~/.emacs.d/evil")
+;;(require 'evil)
+;;(evil-mode 1)
 
-(display-time) 
-
-;;ÏÔÊ¾ĞĞºÅ 
-
-(column-number-mode t) 
-
-(show-paren-mode t) 
-
-;;ÉèÖÃTAB¿í¶ÈÎª4 
-
-(setq default-tab-width 4) 
-
-;;ÒÔÏÂÉèÖÃËõ½ø 
-
-(setq c-indent-level 4) 
-
-(setq c-continued-statement-offset 4) 
-
-(setq c-brace-offset -4) 
-
-(setq c-argdecl-indent 4) 
-
-(setq c-label-offset -4) 
-
-(setq c-basic-offset 4) 
-
-(global-set-key "\C-m" 'reindent-then-newline-and-indent) 
-
-(setq indent-tabs-mode nil) 
-
-(setq standard-indent 4) 
-
-;;¿ªÆôÓï·¨¸ßÁÁ¡£ 
-
-(global-font-lock-mode 1) 
-
-;;ÉèÖÃÄ¬ÈÏ¹¤×÷Ä¿Â¼ 
-
-(setq default-directory "~/code") 
-
-;; È¥µô¹ö¶¯Ìõ 
-
-(set-scroll-bar-mode nil) 
-
-;;¹Ø±Õ¿ªÆô»­Ãæ 
-
-(setq inhibit-startup-message t) 
-
-(setq indent-tabs-mode t) 
-
-;;²»²úÉú±¸·İÎÄ¼ş 
-
-(setq make-backup-files nil) 
-
-;;ÉèÖÃ×Ô¶¨Òå±äÁ¿ 
-
-(custom-set-variables 
-
-'(column-number-mode t) 
-
-'(current-language-environment "UTF-8") 
-
-'(display-time-mode t) 
-
-'(ecb-options-version "2.32") 
-
-'(mouse-1-click-in-non-selected-windows t) 
-
-'(mouse-drag-copy-region t) 
-
-'(mouse-yank-at-point t) 
-
-'(save-place t nil (saveplace)) 
-
-'(show-paren-mode t) 
-
-'(transient-mark-mode t)) 
-
-;;Ñ¡ÔñĞ¡¹¤¾ßÀ¸Í¼±ê 
-
-(tool-bar-mode -1)
+(fset 'yes-or-no-p 'y-or-n-p) ;;å°†yes/noæ›¿æ¢æˆy/n
+(display-time-mode 1) ;;æ˜¾ç¤ºæ—¶é—´
+(setq display-time-24hr-format t);;24å°æ—¶æ ¼å¼
+(setq display-time-day-and-date t);;æ˜¾ç¤ºæ—¥æœŸ
+(setq column-number-mode t) ;; æ˜¾ç¤ºåˆ—å·
+(setq line-number-mode t);;æ˜¾ç¤ºè¡Œå·
+(setq auto-image-file-mode t);;æ‰“å¼€å’Œæ˜¾ç¤ºå›¾ç‰‡
+(setq default-directory "~/xueliang");;è®¾ç½®æ‰“å¼€æ–‡ä»¶æ—¶çš„é»˜è®¤è·¯å¾„
+(setq-default make-backup-files nil);;ä¸è¦ç”Ÿæˆä¸´æ—¶æ–‡ä»¶
+(setq x-select-enable-clipboard t);;æ”¯æŒemacså’Œå¤–éƒ¨ç¨‹åºç²˜è´´
+(set-scroll-bar-mode nil);å»æ‰æ»šåŠ¨æ¡
+(mouse-avoidance-mode 'animate);å…‰æ ‡é è¿‘é¼ æ ‡æŒ‡é’ˆæ—¶ï¼Œè®©é¼ æ ‡æŒ‡é’ˆè‡ªåŠ¨è®©å¼€
+(global-set-key (kbd "C-x a") 'mark-whole-buffer);;ä½¿ç”¨C+x aæ¥å…¨é€‰
